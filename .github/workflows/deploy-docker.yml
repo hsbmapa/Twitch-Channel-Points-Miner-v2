@@ -32,8 +32,8 @@ jobs:
           context: .
           push: true
           tags: |
-            tkdalex/twitch-channel-points-miner-v2:latest
-          platforms: linux/amd64,linux/arm64,linux/arm/v7
+            ${{ secrets.DOCKER_USERNAME }}/twitch-channel-points-miner-v2:latest
+          platforms: linux/arm/v7
           build-args: BUILDX_QEMU_ENV=true
 
       # File size exceeds the maximum allowed 25000 bytes
